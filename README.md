@@ -1,4 +1,4 @@
-timetrackerii
-=============
+Time Tracker II
+===============
 
-Time Tracker II - a rewrite/redesign of my original FVTimeTracker
+Time Tracker II is a rewrite/redesign of my original FVTimeTracker, in Scala.
