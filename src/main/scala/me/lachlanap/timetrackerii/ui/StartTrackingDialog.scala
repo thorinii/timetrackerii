@@ -1,10 +1,7 @@
 
 package me.lachlanap.timetrackerii.ui
 
-import java.awt.Dimension
 import java.awt.GridBagLayout
-import java.awt.event.ActionEvent
-import java.awt.event.ActionListener
 import java.awt.event.WindowAdapter
 import java.awt.event.WindowEvent
 import javax.swing._
@@ -32,6 +29,7 @@ class StartTrackingDialog {
   private def setupComponents(frame: JFrame): Unit = {
     import Anchor._
     import Fill._
+    import Helpers._
 
     val panel = new JPanel
 
@@ -54,27 +52,5 @@ class StartTrackingDialog {
 
     val container = frame.getContentPane
     container.add(panel)
-  }
-
-  private def label(text: String, fontMult: Float = 1f): JLabel = {
-    val label = new JLabel(text)
-
-    if (fontMult != 1) {
-      val font = label.getFont
-      label.setFont(font.deriveFont(font.getSize * fontMult))
-    }
-
-    label
-  }
-
-  private def button(text: String, listener: => Unit = ()): JButton = {
-    val button = new JButton(text)
-    button.addActionListener(new ActionListener {
-      def actionPerformed(e: ActionEvent): Unit = {
-        listener
-      }
-    })
-
-    button
   }
 }
