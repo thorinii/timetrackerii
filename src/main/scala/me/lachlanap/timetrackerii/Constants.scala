@@ -1,4 +1,3 @@
-
 package me.lachlanap.timetrackerii
 
 object Constants {

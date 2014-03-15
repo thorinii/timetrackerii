@@ -1,12 +1,11 @@
-
 package me.lachlanap.timetrackerii.ui
 
 import java.awt._
 import java.awt.event._
 import javax.swing._
 
-object Helpers {
-  def setLaF: Unit = {
+object UIConstructHelpers {
+  def setLaF = {
     def lafIsCrossPlatfrom = UIManager.getCrossPlatformLookAndFeelClassName == UIManager.getSystemLookAndFeelClassName
 
     val lafClass = UIManager.getInstalledLookAndFeels
@@ -39,4 +38,11 @@ object Helpers {
 
     button
   }
+}
+
+object UITextualHelpers {
+  import com.github.nscala_time.time.Imports._
+
+  private lazy val timeFormatter = DateTimeFormat.forPattern("hh:mm aa")
+  def formatTime(time: DateTime) = timeFormatter.print(time)
 }

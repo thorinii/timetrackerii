@@ -1,5 +1,5 @@
+package me.lachlanap.timetrackerii
 
-import me.lachlanap.timetrackerii.Constants
 import org.scalatest._
 
 class ConstantsTest extends FlatSpec with Matchers {
